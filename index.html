@@ -4,89 +4,91 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Patrick Okare | Lead Data Engineer</title>
-<meta name="description" content="Patrick Okare is a Lead Data Engineer in Toronto building governed lakehouse platforms on Databricks and Azure.">
+<meta name="description" content="Patrick Okare is a Lead Data Engineer in Toronto building reliable lakehouse and warehouse platforms on Databricks and Azure.">
 <meta property="og:title" content="Patrick Okare | Lead Data Engineer">
-<meta property="og:description" content="Governed lakehouse platforms on Databricks and Azure. Open to Senior and Lead Data Engineering roles and contract work.">
+<meta property="og:description" content="Building reliable data platforms at scale. Open to Senior and Lead Data Engineering roles and contract work.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://patrickokare.github.io">
 <meta property="og:image" content="https://github.com/patrickokare.png?size=400">
-<meta name="theme-color" content="#EEF2F9">
+<meta name="theme-color" content="#0D1513">
 <link rel="icon" href="https://github.com/patrickokare.png?size=64">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ground:#EEF2F9;--ink:#0F1B2D;--muted:#55657D;--accent:#1B4FD8;--gold:#E8A93B;
-  --glass:rgba(255,255,255,.58);--glass-strong:rgba(255,255,255,.8);--edge:rgba(255,255,255,.9);
-  --shadow:0 10px 34px rgba(31,60,120,.12);
-  --display:'Sora',system-ui,sans-serif;--body:'DM Sans',system-ui,sans-serif;
+  --ground:#0D1513;--panel:rgba(255,255,255,.045);--panel-hover:rgba(255,255,255,.07);
+  --edge:rgba(255,255,255,.1);--ink:#F2F6F5;--muted:#9DB0AB;--accent:#6EE7B7;--accent-ink:#06231A;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
+  /* layout: one left-aligned column, dark panels, mint accent and mono eyebrows */
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;min-height:100vh;position:relative;overflow-x:hidden}
-body::before,body::after{content:"";position:fixed;z-index:-1;border-radius:50%;filter:blur(80px);pointer-events:none}
-body::before{width:520px;height:520px;background:#BFD4FF;top:-140px;left:-120px}
-body::after{width:480px;height:480px;background:#FFE1A6;bottom:-160px;right:-120px}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;min-height:100vh;overflow-x:hidden;
+  background-image:radial-gradient(700px 420px at 8% -6%,rgba(110,231,183,.09),transparent 70%)}
 a{color:inherit;text-decoration:none}
-a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:12px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:10px}
 .wrap{max-width:960px;margin:0 auto;padding:0 20px}
-.glass{background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(170%);backdrop-filter:blur(20px) saturate(170%);border:1px solid var(--edge);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.9);border-radius:22px}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background:var(--glass-strong)}}
-nav{position:sticky;top:14px;z-index:10;margin-top:14px}
-nav .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px 10px 18px;border-radius:999px}
-.brand{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.2px}
-.links{display:flex;gap:4px;flex-wrap:wrap}
-.links a{padding:8px 14px;border-radius:999px;font-size:14px;font-weight:500;color:var(--muted);transition:background .15s,color .15s}
-.links a:hover{background:rgba(255,255,255,.85);color:var(--ink)}
-.hero{padding:56px 0 24px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center}
-.photo{width:168px;height:168px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 14px 40px rgba(31,60,120,.22)}
-.eyebrow{font-size:13px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6vw,54px);line-height:1.08;margin:0 0 14px;letter-spacing:-.5px}
-.lede{font-size:19px;color:var(--muted);max-width:560px;margin:0 0 24px}
+.panel{background:var(--panel);border:1px solid var(--edge);border-radius:16px}
+
+nav{position:sticky;top:0;z-index:10;background:rgba(13,21,19,.78);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--edge)}
+nav .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
+.brand{font-family:var(--mono);font-weight:500;font-size:14px;letter-spacing:.4px}
+.links{display:flex;gap:2px;flex-wrap:wrap}
+.links a{padding:12px;border-radius:8px;font-size:14px;font-weight:500;color:var(--muted);transition:color .15s,background .15s}
+.links a:hover{color:var(--ink);background:var(--panel)}
+
+.hero{padding:64px 0 28px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.photo{width:176px;height:176px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);box-shadow:0 0 0 6px rgba(110,231,183,.12)}
+.eyebrow{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-weight:700;font-size:clamp(34px,5.6vw,52px);line-height:1.1;margin:0 0 16px;letter-spacing:-.6px}
+.stackline{font-size:16px;color:var(--muted);margin:0 0 26px}
 .cta{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:10px;font-weight:600;font-size:15px;transition:transform .15s,background .15s,border-color .15s}
 .btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--ink);color:#fff;box-shadow:0 8px 22px rgba(15,27,45,.28)}
-.btn.ghost{background:var(--glass-strong);border:1px solid var(--edge);box-shadow:var(--shadow)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.chip{padding:6px 14px;border-radius:999px;font-size:13px;font-weight:500;background:var(--glass);border:1px solid var(--edge);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
-section{padding:40px 0 8px}
-h2{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
-.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{border:1px solid var(--edge);background:var(--panel)}
+.btn.ghost:hover{border-color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{padding:5px 12px;border-radius:999px;font-family:var(--mono);font-size:12px;font-weight:500;color:var(--muted);border:1px solid var(--edge)}
+.intro{max-width:640px;color:var(--muted);margin:0 0 4px}
+a.inline{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+section{padding:44px 0 4px}
+h2{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:2.2px;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.card{padding:22px;transition:transform .18s,box-shadow .18s}
-a.card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(31,60,120,.18),inset 0 1px 0 rgba(255,255,255,.9)}
-.card h3{font-family:var(--display);font-weight:600;font-size:18px;margin:0 0 8px}
+.card{padding:22px;transition:border-color .18s,background .18s,transform .18s}
+a.card:hover{border-color:var(--accent);background:var(--panel-hover);transform:translateY(-3px)}
+.card h3{font-size:18px;font-weight:600;margin:0 0 8px}
 .card p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
-.card .tag{display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent)}
+.card .tag{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:12px;font-weight:500;color:var(--accent)}
+.thumb{display:block;width:100%;height:auto;border-radius:10px;margin:0 0 18px;border:1px solid var(--edge)}
 .skills{display:flex;flex-wrap:wrap;gap:10px;padding:22px}
-.skill{padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid var(--edge);font-size:14px;font-weight:500}
+.skill{padding:7px 14px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid var(--edge);font-size:14px;font-weight:500}
 .certs{list-style:none;margin:0;padding:22px;display:grid;gap:12px}
 .certs li{display:flex;gap:12px;align-items:baseline;font-size:15px}
 .certs b{font-weight:600}
-.dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);transform:translateY(-1px)}
-.contact{padding:32px;text-align:center;margin-top:8px}
-.contact h3{font-family:var(--display);font-size:24px;margin:0 0 8px}
-.contact p{margin:0 auto 22px;color:var(--muted);max-width:520px}
-.contact .cta{justify-content:center}
-footer{padding:36px 0 48px;text-align:center;font-size:13px;color:var(--muted)}
+.dot{flex:none;width:8px;height:8px;border-radius:2px;background:var(--accent);transform:translateY(-1px)}
+.contact{padding:36px;margin-top:4px}
+.contact h2{font-family:var(--sans);font-size:26px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--ink);margin:0 0 8px}
+section{scroll-margin-top:76px}
+.contact p{margin:0 0 22px;color:var(--muted);max-width:540px}
+footer{padding:40px 0 52px;font-size:13px;color:var(--muted);font-family:var(--mono)}
+
 @media (max-width:760px){
-  .hero{grid-template-columns:1fr;justify-items:center;text-align:center;padding-top:36px;gap:24px}
-  .lede{margin-left:auto;margin-right:auto}
-  .cta,.chips{justify-content:center}
-  .grid3,.grid2{grid-template-columns:1fr}
-  .links a{padding:8px 10px}
+  .hero{grid-template-columns:1fr;gap:26px;padding-top:40px}
+  .grid2{grid-template-columns:1fr}
   .brand{display:none}
   nav .bar{justify-content:center}
+  .links a{padding:12px 10px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.btn:hover,a.card:hover{transform:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
+
 <nav aria-label="Primary">
-  <div class="bar glass">
+  <div class="wrap bar">
     <span class="brand">Patrick Okare</span>
     <div class="links">
       <a href="#work">Work</a>
@@ -96,91 +98,132 @@ footer{padding:36px 0 48px;text-align:center;font-size:13px;color:var(--muted)}
     </div>
   </div>
 </nav>
+
+<div class="wrap">
+
 <header class="hero">
-  <img class="photo" src="https://github.com/patrickokare.png?size=400" alt="Portrait of Patrick Okare" width="168" height="168">
+  <img class="photo" src="https://github.com/patrickokare.png?size=400" alt="Portrait of Patrick Okare" width="176" height="176">
   <div>
-    <p class="eyebrow">Lead Data Engineer · Toronto, Canada</p>
-    <h1>Governed lakehouse platforms that stay correct at scale.</h1>
-    <p class="lede">I design and run Databricks and Azure data platforms: Medallion lakehouses, Kimball models, reliable pipelines and the governance around them. Open to Senior and Lead Data Engineering roles and contract work through KareTech Analytics.</p>
+    <p class="eyebrow">Data engineering, AI &amp; analytics</p>
+    <h1>Building reliable data platforms at scale.</h1>
+    <p class="stackline">Databricks · Snowflake · dbt · Spark · Python · SQL</p>
     <div class="cta">
       <a class="btn primary" href="https://linkedin.com/in/patrickokare">LinkedIn</a>
       <a class="btn ghost" href="https://github.com/patrickokare">GitHub</a>
       <a class="btn ghost" href="mailto:patrickbabawale@gmail.com">Email me</a>
     </div>
     <div class="chips">
+      <span class="chip">Lead Data Engineer</span>
+      <span class="chip">Toronto, Canada</span>
       <span class="chip">9+ years</span>
       <span class="chip">Databricks Certified</span>
-      <span class="chip">Azure Data Engineer</span>
     </div>
   </div>
 </header>
+
+<main>
+<p class="intro">I design and run lakehouse and warehouse platforms on Databricks and Azure: Medallion architecture, Kimball models, dependable pipelines and the governance around them. Open to Senior and Lead Data Engineering roles and contract work through <a class="inline" href="https://karetech.ca">KareTech Analytics</a>.</p>
+
 <section id="work" aria-labelledby="work-h">
   <h2 id="work-h">Featured projects</h2>
   <div class="grid2">
-    <a class="card glass" href="https://github.com/patrickokare/databricks-dataml">
+    <a class="card panel" href="https://github.com/patrickokare/databricks-dataml">
+      <svg class="thumb" viewBox="0 0 320 120" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="120" fill="#0A110F"/>
+        <rect x="20" y="30" width="78" height="60" rx="8" fill="#6EE7B7" fill-opacity=".22"/>
+        <rect x="121" y="30" width="78" height="60" rx="8" fill="#6EE7B7" fill-opacity=".38"/>
+        <rect x="222" y="30" width="78" height="60" rx="8" fill="#6EE7B7"/>
+        <path d="M100 60h19M201 60h19" stroke="#9DB0AB" stroke-width="2" stroke-linecap="round"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" text-anchor="middle">
+          <text x="59" y="64" fill="#CFEDE3">BRONZE</text>
+          <text x="160" y="64" fill="#E8FBF3">SILVER</text>
+          <text x="261" y="64" fill="#06231A">GOLD</text>
+        </g>
+      </svg>
       <h3>databricks-dataml</h3>
       <p>A public portfolio of Databricks lakehouse projects, built hands-on with Delta Lake, Unity Catalog and Medallion layers.</p>
-      <span class="tag">View on GitHub →</span>
+      <span class="tag">VIEW ON GITHUB →</span>
     </a>
-    <a class="card glass" href="https://github.com/patrickokare/evlytics-washington-portfolio-project">
+    <a class="card panel" href="https://github.com/patrickokare/evlytics-washington-portfolio-project">
+      <svg class="thumb" viewBox="0 0 320 120" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="120" fill="#0A110F"/>
+        <g fill="#6EE7B7">
+          <rect x="34" y="82" width="28" height="22" rx="4" fill-opacity=".3"/>
+          <rect x="78" y="70" width="28" height="34" rx="4" fill-opacity=".4"/>
+          <rect x="122" y="58" width="28" height="46" rx="4" fill-opacity=".55"/>
+          <rect x="166" y="44" width="28" height="60" rx="4" fill-opacity=".7"/>
+          <rect x="210" y="30" width="28" height="74" rx="4" fill-opacity=".85"/>
+          <rect x="254" y="16" width="28" height="88" rx="4"/>
+        </g>
+        <path d="M20 106h280" stroke="#9DB0AB" stroke-opacity=".5" stroke-width="1.5"/>
+      </svg>
       <h3>EVLytics: Washington EV lakehouse</h3>
       <p>Washington State electric vehicle registration data modelled end to end on Databricks and Delta Lake.</p>
-      <span class="tag">View on GitHub →</span>
+      <span class="tag">VIEW ON GITHUB →</span>
     </a>
   </div>
 </section>
+
 <section aria-labelledby="do-h">
   <h2 id="do-h">What I do</h2>
-  <div class="grid3">
-    <div class="card glass"><h3>Lakehouse design</h3><p>Medallion architecture on Databricks and Delta Lake, with Unity Catalog governance from day one.</p></div>
-    <div class="card glass"><h3>Pipelines and migration</h3><p>Batch and incremental ingestion, on-premises to cloud moves, and full reconciliation so the numbers match.</p></div>
-    <div class="card glass"><h3>Modelling and delivery</h3><p>Kimball dimensional models, CI/CD with GitHub Actions and Liquibase, and analytics that business teams can trust.</p></div>
+  <div class="grid2">
+    <div class="card panel"><h3>Lakehouse design</h3><p>Medallion architecture on Databricks and Delta Lake, with Unity Catalog governance.</p></div>
+    <div class="card panel"><h3>Warehouse design</h3><p>Data warehouses on Synapse, Fabric and Snowflake, with Kimball star schemas, slowly changing dimensions and reconciled reporting layers.</p></div>
+    <div class="card panel"><h3>Pipelines and migration</h3><p>Batch and incremental ingestion, on-premises to cloud moves, and full reconciliation so the numbers match.</p></div>
+    <div class="card panel"><h3>Delivery and quality</h3><p>CI/CD with GitHub Actions and Liquibase, plus data quality checks and monitoring that business teams can trust.</p></div>
   </div>
 </section>
+
 <section id="stack" aria-labelledby="stack-h">
   <h2 id="stack-h">Stack</h2>
-  <div class="skills glass">
+  <div class="skills panel">
     <span class="skill">Databricks</span><span class="skill">Delta Lake</span><span class="skill">Unity Catalog</span>
     <span class="skill">PySpark</span><span class="skill">SQL</span><span class="skill">Azure Data Factory</span>
     <span class="skill">Microsoft Fabric</span><span class="skill">Snowflake</span><span class="skill">dbt</span>
     <span class="skill">Kimball modelling</span><span class="skill">Medallion architecture</span><span class="skill">CI/CD</span>
   </div>
 </section>
+
 <section aria-labelledby="cert-h">
   <h2 id="cert-h">Certifications</h2>
-  <ul class="certs glass">
+  <ul class="certs panel">
     <li><span class="dot"></span><span><b>Databricks</b> Certified Data Engineer Associate</span></li>
     <li><span class="dot"></span><span><b>Microsoft</b> Certified Azure Data Engineer Associate (DP-203)</span></li>
-    <li><span class="dot"></span><span><b>Microsoft</b> Fabric Data Engineer Associate (DP-600), in progress</span></li>
     <li><span class="dot"></span><span><b>Oracle</b> Certified SQL Developer Associate</span></li>
   </ul>
 </section>
+
 <section id="writing" aria-labelledby="write-h">
   <h2 id="write-h">Writing</h2>
   <div class="grid2">
-    <a class="card glass" href="https://karetech.medium.com">
+    <a class="card panel" href="https://karetech.medium.com">
       <h3>Medium</h3>
       <p>Lakehouse Chronicles and data engineering write-ups from real builds.</p>
-      <span class="tag">Read on Medium →</span>
+      <span class="tag">READ ON MEDIUM →</span>
     </a>
-    <a class="card glass" href="https://patrickokare.substack.com">
+    <a class="card panel" href="https://patrickokare.substack.com">
       <h3>Substack</h3>
-      <p>Newsletter on data engineering and building a career in it.</p>
-      <span class="tag">Read on Substack →</span>
+      <p>Newsletter on data engineering and analytics.</p>
+      <span class="tag">READ ON SUBSTACK →</span>
     </a>
   </div>
 </section>
+
 <section id="contact" aria-labelledby="contact-h">
-  <div class="contact glass">
-    <h3 id="contact-h">Let's talk</h3>
-    <p>Hiring for a Senior or Lead Data Engineer, or need a lakehouse built? Send a note and I'll reply quickly.</p>
+  <div class="contact panel">
+    <h2 id="contact-h">Let's talk</h2>
+    <p>Hiring for a Senior or Lead Data Engineer, or need a lakehouse or warehouse built? Send a note.</p>
     <div class="cta">
       <a class="btn primary" href="mailto:patrickbabawale@gmail.com">patrickbabawale@gmail.com</a>
       <a class="btn ghost" href="https://linkedin.com/in/patrickokare">Connect on LinkedIn</a>
+      <a class="btn ghost" href="https://karetech.ca">karetech.ca</a>
     </div>
   </div>
 </section>
-<footer>© 2026 Patrick Okare · KareTech Analytics · Toronto, Canada</footer>
+</main>
+
+<footer>© 2026 Patrick Okare · <a class="inline" href="https://karetech.ca">KareTech Analytics</a> · Toronto, Canada</footer>
+
 </div>
 </body>
 </html>
